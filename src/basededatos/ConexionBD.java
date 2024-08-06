@@ -31,7 +31,7 @@ public class ConexionBD {
         try { 
             conexion = DriverManager.getConnection(url,usuario,password);
             statement = conexion.createStatement();
-            statement.executeUpdate("INSERT INTO INGRESOPLACA(PLACA,TIPOVEHICULO,TELEFONO)VALUES('AAA','Carro','3000000000')");
+            statement.executeUpdate("INSERT INTO INGRESOPLACA(PLACA,TIPOVEHICULO,TELEFONO)VALUES('QGE15C','Motocicleta','3002548558')");
             rs = statement.executeQuery("SELECT * FROM INGRESOPLACA");
             rs.next();
             do{
@@ -39,8 +39,8 @@ public class ConexionBD {
             }while(rs.next());
             
         } catch (SQLException ex) {
-            Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
-            //System.out.println("No se encuentra la base de datos: ");
+            //Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("No se encuentra la base de datos: ");
         }
     }
     
